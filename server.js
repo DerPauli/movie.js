@@ -1,12 +1,13 @@
 'use strict';
 
 const Discord       = require('discord.js');
+const { create } = require('domain');
 const client        = new Discord.Client();
 
 var fs          = require("fs");
 
 var content     = fs.readFileSync("movies.json");
-var movies      = JSON.parse(content);
+var json      = JSON.parse(content);
 
 
 /* dotenv */
@@ -35,13 +36,35 @@ client.on('message', message => {
     }
 
     if(message.content === "!movielist") {
-        for(var element in json.movies) {
-            var embed = createEmbed(movies);
+        for (var element of json.movies) {
+            var embed = createEmbed(element);
             message.channel.send(embed);
         }
 
         // JSON.stringify(movies, null, 2), { code: true }
     }
+
+    if(message.content.includes("!movie")){
+        var msgs = message.content.split(' ');
+        msgs.shift();
+        var movie = msgs.join(' ');
+
+        message.reply("Searching the list for movie " + movie + " ...");
+        setTimeout( function() { 
+            var entry = searchDB(movie, json.movies);
+
+            if(entry) {
+                var embed = createEmbed(entry);
+                message.channel.send(embed);
+            }
+            else {
+                message.channel.send("No entry with name " + movie + " found!");
+            }
+
+        }, 4500);
+
+    }
+
 });
 
 
@@ -51,32 +74,42 @@ client.login(BOT_TOKEN);
 
 function createEmbed(el) {
 
-    var genres = {};
+    // var preperation
+    var genres = el.genres.join(", ");
+    var hours = Math.floor(el.length / 60);          
+    var minutes = el.length % 60;
 
-    for(var gEl in el.genres) {
-        genres["name"]
-    }
 
     const embed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(el.name)
         .setURL(el.link)
-        //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+        .setAuthor('Review', el.reviewThumbnail, el.review)
         //.setDescription('Some description here')
-        .setThumbnail(el.thumbnail)
+        //.setThumbnail(el.thumbnail)
         .addFields(
-            { name: '\u200B', value: '\u200B' },
+            //{ name: '\u200B', value: '\u200B' },
             { name: 'Type', value: el.type, inline: true },
-            { name: 'Type', value: el.type, inline: true },
-            { name: 'Type', value: el.type, inline: true },
-            { name: 'Type', value: el.type, inline: true },
-            { name: 'Type', value: el.type, inline: true },
+            { name: 'Genres', value: genres, inline: true },
+            { name: 'Länge', value: `${hours}h ${minutes}min`, inline: true },
+            { name: 'Erscheinungsjahr', value: el.release, inline: true },
+            { name: 'Plattform', value: el.platform, inline: true }
         )
-        .addField('Inline field title', 'Some value here', true)
-        .setImage('https://i.imgur.com/wSTFkRM.png')
+        .setImage(el.thumbnail)
         .setTimestamp()
-        .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+        .setFooter('Generiert von movie.js');
 
     return embed;
 
+}
+
+
+function searchDB(movie, db) {
+
+    for(var el of db) {
+        if(movie === el.name)
+            return el;
+    }
+
+    return null;
 }

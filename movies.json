@@ -3,6 +3,7 @@
         {
             "name": "Oculus",
             "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Oculus_%282013_film%29_poster.jpg/220px-Oculus_%282013_film%29_poster.jpg",
+            "reviewThumbnail": "https://www.pngitem.com/pimgs/m/138-1381056_rotten-tomatoes-fresh-logo-hd-png-download.png",
             "type": "Film",
             "genres": [
                 "Horror"
@@ -18,6 +19,7 @@
         {
             "name": "His House",
             "thumbnail": "https://de.web.img2.acsta.net/c_310_420/pictures/20/10/20/10/48/2087676.jpg",
+            "reviewThumbnail": "https://www.pngitem.com/pimgs/m/138-1381056_rotten-tomatoes-fresh-logo-hd-png-download.png",
             "type": "Film",
             "genres": [
                 "Indie",
