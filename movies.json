@@ -1,37 +1,38 @@
 {
-    "movies": [
-        {
-            "name": "Oculus",
-            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Oculus_%282013_film%29_poster.jpg/220px-Oculus_%282013_film%29_poster.jpg",
-            "reviewThumbnail": "https://www.pngitem.com/pimgs/m/138-1381056_rotten-tomatoes-fresh-logo-hd-png-download.png",
-            "type": "Film",
-            "genres": [
-                "Horror"
-            ],
-            "length": "99",
-            "release": "2014",
-            "platform": "Amazon Prime Video",
-            "review": "https://www.rottentomatoes.com/m/oculus",
-            "link": "https://www.amazon.de/Oculus-dt-OV-Katee-Sackhoff/dp/B00PWZX5P0"
-
-        },
-
-        {
-            "name": "His House",
-            "thumbnail": "https://de.web.img2.acsta.net/c_310_420/pictures/20/10/20/10/48/2087676.jpg",
-            "reviewThumbnail": "https://www.pngitem.com/pimgs/m/138-1381056_rotten-tomatoes-fresh-logo-hd-png-download.png",
-            "type": "Film",
-            "genres": [
-                "Indie",
-                "Horror",
-                "Übernatürlich"
-            ],
-            "length": "93",
-            "release": "2020",
-            "platform": "Netflix",
-            "review": "https://www.rottentomatoes.com/m/his_house",
-            "link": "https://www.netflix.com/at/title/81231197"
-
-        }
-    ]
+  "movies": [
+    {
+      "name": "Oculus",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzE1NzM4MjEyNV5BMl5BanBnXkFtZTgwMjYzMjMzMTE@._V1_SX300.jpg",
+      "type": "Film",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "length": "104",
+      "release": "2013",
+      "reviews": [
+        "Internet Movie Database: 6.5/10",
+        "Rotten Tomatoes: 74%",
+        "Metacritic: 61/100"
+      ],
+      "link": "N/A"
+    },
+    {
+      "name": "His House",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BODY2NjQzYzYtYTgyMy00M2MxLTgyMWQtZTU1NWZjZWU4ZDc3XkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_SX300.jpg",
+      "type": "Film",
+      "genres": [
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "length": "93",
+      "release": "2020",
+      "reviews": [
+        "Internet Movie Database: 6.3/10",
+        "Metacritic: 72/100"
+      ],
+      "link": "N/A"
+    }
+  ]
 }
