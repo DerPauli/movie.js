@@ -1,0 +1,24 @@
+{
+  "name": "movie.js",
+  "version": "1.0.0",
+  "description": "A movie bot for discord interactions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerPauli/movie.js.git"
+  },
+  "author": "Paul Merker <paul.merker@codezenith.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerPauli/movie.js/issues"
+  },
+  "homepage": "https://github.com/DerPauli/movie.js#readme",
+  "dependencies": {
+    "discord.js": "^12.5.0",
+    "dotenv": "^8.2.0"
+  }
+}

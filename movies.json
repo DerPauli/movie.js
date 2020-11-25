@@ -1,0 +1,35 @@
+{
+    "movies": [
+        {
+            "name": "Oculus",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Oculus_%282013_film%29_poster.jpg/220px-Oculus_%282013_film%29_poster.jpg",
+            "type": "Film",
+            "genres": [
+                "Horror"
+            ],
+            "length": "99",
+            "release": "2014",
+            "platform": "Amazon Prime Video",
+            "review": "https://www.rottentomatoes.com/m/oculus",
+            "link": "https://www.amazon.de/Oculus-dt-OV-Katee-Sackhoff/dp/B00PWZX5P0"
+
+        },
+
+        {
+            "name": "His House",
+            "thumbnail": "https://de.web.img2.acsta.net/c_310_420/pictures/20/10/20/10/48/2087676.jpg",
+            "type": "Film",
+            "genres": [
+                "Indie",
+                "Horror",
+                "Übernatürlich"
+            ],
+            "length": "93",
+            "release": "2020",
+            "platform": "Netflix",
+            "review": "https://www.rottentomatoes.com/m/his_house",
+            "link": "https://www.netflix.com/at/title/81231197"
+
+        }
+    ]
+}
